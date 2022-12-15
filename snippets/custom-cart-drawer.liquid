@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ 'custom-ajax-cart-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+<!-- CART DRAWER HTML -->
+<custom-cart-drawer class="custom-cart-drawer" id="cart-drawer">
+  <section class="drawer" id="drawer-name" data-drawer-target>
+    <div class="drawer__overlay" tabindex="-1"></div>
+    <div class="drawer__wrapper">
+      <div class="drawer__header">
+        <div class="drawer__title"><h2 class="page-title cart-title mb-0 h1" tabindex="0">Cart</h2></div>
+        <button type="submit" class="drawer__close" data-drawer-close aria-label="Close Drawer"></button>
+      </div>
+      <div class="drawer__content" id="cart__drawer">
+        <cart-content id="cart__drawer_items"></cart-content>
+      </div>
+    </div>
+  </section>
+</custom-cart-drawer>
+
