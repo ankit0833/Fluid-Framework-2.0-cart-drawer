@@ -65,7 +65,7 @@ class CustomCart extends HTMLElement {
     let targetName = event.currentTarget.getAttribute('quantity-box');
     let $qtyInputBox = currentTarget.closest('[data-qty-container]').querySelector('[data-qty-input]');
     let itemNo = $qtyInputBox.dataset.index || 1;
-    console.log(itemNo)
+    console.log(itemNo);
     let currentQty = parseInt($qtyInputBox.value) || 1;
     let finalQty = 1;
     console.log(finalQty)
