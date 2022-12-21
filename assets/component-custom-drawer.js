@@ -64,9 +64,8 @@ class CustomCart extends HTMLElement {
     let currentTarget = event.currentTarget;
     let targetName = event.currentTarget.getAttribute('quantity-box');
     let $qtyInputBox = currentTarget.closest('[data-qty-container]').querySelector('[data-qty-input]');
-    //let itemNo = $qtyInputBox.dataset.index || 1;
+    let itemNo = $qtyInputBox.dataset.index || 1;
     let currentQty = parseInt($qtyInputBox.value) || 1;
-    console.log(currentQty)
     let finalQty = 1;
     console.log(finalQty)
     if (targetName == 'minus' && currentQty <= 1) {
@@ -74,10 +73,8 @@ class CustomCart extends HTMLElement {
       console.log("hi-1");
     } else if (targetName == 'minus') {
       finalQty = currentQty - 1
-       console.log("hi-2");
     } else {
       finalQty = currentQty + 1;
-      console.log("hi-3");
     }
     this.updateItemQty(itemNo, finalQty);
     this.headerUpdate();
