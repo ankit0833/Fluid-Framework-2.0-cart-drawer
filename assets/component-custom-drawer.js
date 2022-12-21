@@ -84,26 +84,26 @@ class CustomCart extends HTMLElement {
     const itemNo = $qtyInputBox.dataset.index || null;
     if (itemNo) this.updateItemQty(itemNo, qtyValue);
   }
-  updateItemQty(line, quantity) {
-    let lineItem = document.querySelectorAll('[data-cart-item]')[line - 1];
-    if (lineItem) {
-      lineItem.classList.add('updating');
-    }
-    const body = JSON.stringify({
-      line,
-      quantity
-    });
-    fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
-    .then((response) => {
-      return response.text();
-    })
-    .then((state) => {
-      this.getCartData();
-    }).catch((error) => {
-      console.log(error);
-    });
-    this.headerUpdate();
-  }
+  // updateItemQty(line, quantity) {
+  //   let lineItem = document.querySelectorAll('[data-cart-item]')[line - 1];
+  //   if (lineItem) {
+  //     lineItem.classList.add('updating');
+  //   }
+  //   const body = JSON.stringify({
+  //     line,
+  //     quantity
+  //   });
+  //   fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
+  //   .then((response) => {
+  //     return response.text();
+  //   })
+  //   .then((state) => {
+  //     this.getCartData();
+  //   }).catch((error) => {
+  //     console.log(error);
+  //   });
+  //   this.headerUpdate();
+  // }
   
   /**
   *  Cart Item Remove
