@@ -66,8 +66,8 @@ class CustomCart extends HTMLElement {
     let $qtyInputBox = currentTarget.closest('[data-qty-container]').querySelector('[data-qty-input]');
     let itemNo = $qtyInputBox.dataset.index || 1;
     let currentQty = parseInt($qtyInputBox.value) || 1;
-    console.log(finalQty)
     let finalQty = 1;
+    console.log(finalQty)
     if (targetName == 'minus' && currentQty <= 1) {
       return false
     } else if (targetName == 'minus') {
