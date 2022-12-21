@@ -73,8 +73,10 @@ class CustomCart extends HTMLElement {
       console.log("hi-1");
     } else if (targetName == 'minus') {
       finalQty = currentQty - 1
+       console.log("hi-2");
     } else {
       finalQty = currentQty + 1;
+      console.log("hi-3");
     }
     this.updateItemQty(itemNo, finalQty);
     this.headerUpdate();
