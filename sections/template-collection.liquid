@@ -31,7 +31,7 @@
 
         <div class="col">
             <div id="collection-product-grid">
-                {%- paginate collection.products by product_count -%}
+                {%- paginate collection.products by 5 -%}
                     {%- if collection.products.size == 0 -%}
                         <div class="row mt-5" id="template-collection" data-id="{{ section.id }}">
                             <div class="col-12 text-center mt-5">
